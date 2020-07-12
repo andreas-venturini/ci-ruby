@@ -26,17 +26,6 @@ RUN /tmp/install-wkhtmltopdf && wkhtmltopdf --version
 COPY scripts/install-imagemagick /tmp/install-imagemagick
 RUN /tmp/install-imagemagick && identify -version && identify -list configure
 
-# Linter dependencies
-RUN gem install bundler-audit \
-  && gem install pronto -v 0.10.0 \
-  # RuboCop extensions
-  && gem install rubocop-rails_config rubocop-performance \
-  && gem install pronto-brakeman -v 0.10.0 \
-  # && gem install pronto-coffeelint \ TODO: not yet compatible w/ pronto 0.10
-  && gem install pronto-rubocop -v 0.10.0 \
-  # && gem install pronto-rails_schema \ TODO: not yet compatible w/ pronto 0.10
-  && gem install pronto-scss -v 0.10.0
-
 # Install bundler 2 & RubyGems
 RUN gem install bundler
 RUN gem update --system
