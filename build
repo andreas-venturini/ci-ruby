@@ -7,6 +7,6 @@ set -euo pipefail
 
 TAG=2.6.6-chrome-83-node-yarn-wkhtmltopdf
 
-NAME=denkungsart/ci-ruby:"$TAG"
+NAME=ghcr.io/denkungsart/ci-ruby:"$TAG"
 
 docker build -t "$NAME" . &> logs/"$(date +%F)"-"$(date +%T)".log
