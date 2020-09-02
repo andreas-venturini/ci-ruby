@@ -5,7 +5,7 @@
 # set -o pipefail: prevent errors in a pipeline from being masked
 set -euo pipefail
 
-TAG=2.6.6-chrome-83-node-yarn-wkhtmltopdf
+TAG=2.6.6-chrome-85-node-yarn-wkhtmltopdf
 
 NAME=ghcr.io/denkungsart/ci-ruby:"$TAG"
 
